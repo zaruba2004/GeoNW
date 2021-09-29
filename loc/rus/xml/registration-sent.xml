@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <heading>Регистрация прошла успешно</heading>
+  <message>Ваша регистрация прошла успешно, проверьте логин и пароль в электронном письме.
+    Спасибо.
+  </message>
+  <errorEmailAddressAlreadyRegistered>
+    <p>К сожалению, зарегистрироваться
+      <font class="error">НЕ УДАЛОСЬ</font>
+      потому что Вы уже зарегистрированный пользователь.
+    </p>
+    <p>Если вы забыли свой пароль, обратитесь в службу поддержки по Email-адресу
+      <a href="mailto:yourname@yoursite.org?subject=Forgotten password">yourname@yoursite.org</a>
+      или телефону: xxx-xxxxxxxx
+    </p>
+    <p>Опция сброса пароля будет доступна в ближайшее время</p>
+  </errorEmailAddressAlreadyRegistered>
+  <errorEmailToAddressFailed>
+    <p>К сожалению, зарегистрироваться
+      <font class="error">НЕ УДАЛОСЬ</font>
+      потому что мы не можем отослать Вам электронное письмо по предоставленному Вами Email-адресу.
+    </p>
+    <p>Проверьте свои данные и повторите попытку регистрации</p>
+  </errorEmailToAddressFailed>
+  <errorProfileRequestFailed>
+    <p>Ваш запрос на Редакторский доступ не может быть доставлен</p>
+    <p>Пожалуйста, обратитесь в службу поддержки по Email-адресу
+      <a href="mailto:yourname@yoursite.org?subject=Forgotten password">yourname@yoursite.org</a>
+      или телефону: xxx-xxxxxxxx
+    </p>
+  </errorProfileRequestFailed>
+</strings>

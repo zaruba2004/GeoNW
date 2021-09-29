@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <notfound>Метаданные не могут быть найдены</notfound>
+  <notowner>Метаданные не могут быть обработаны, потому что Вы не являетесь их владельцем</notowner>
+  <updated>Метаданные обработаны</updated>
+  <notProcessFound>Процесс не найден в схеме метаданных</notProcessFound>
+</strings>

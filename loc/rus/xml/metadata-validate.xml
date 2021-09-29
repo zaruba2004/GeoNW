@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <heading>Проверка метаданных</heading>
+  <message>Проверка корректности формата метаданных успешно завершена</message>
+  <schemaTronError>однако были обнаружены несоответствия правилам выбранного
+    формата
+  </schemaTronError>
+  <schemaTronValid>Несоответствий выбранному формату не найдено</schemaTronValid>
+  <schemaTronReport>Отчет о проверке доступен здесь</schemaTronReport>
+  <invalidElement>Неверный элемент. Неверное содержание начинается с элемента: </invalidElement>
+  <onElementOf>Один из следующих элементов</onElementOf>
+  <isExpected>ожидается. </isExpected>
+  <isNotComplete>не завершен. </isNotComplete>
+  <elementLocated>Родительский элемент: </elementLocated>
+  <missingElement>Пропущен элемент. Содержание этого элемента: </missingElement>
+  <invalidValue>Неверное или пропущенное значение. </invalidValue>
+  <notValidFor> - недопустимое значение для</notValidFor>
+  <xsdErrorIs>XSD-ошибка: </xsdErrorIs>
+  <inElement>в элементе</inElement>
+  <enum1>Значение</enum1>
+  <enum2>не верно для этого поля</enum2>
+  <enum3>Список значений: </enum3>
+</strings>

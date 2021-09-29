@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <updatedRecords>
+    <username>Владелец (Имя пользователя)</username>
+    <surname>Владелец (Фамилия)</surname>
+    <name>Владелец (Имя)</name>
+    <email>Владелец (Email)</email>
+    <groupName>Группа Владельца</groupName>
+    <groupOwnerMail>Группа Владельца (Admin Email)</groupOwnerMail>
+    <changedate>Дата последнего обновления</changedate>
+    <recordName>Название записи</recordName>
+    <uuid>UUID метаданных</uuid>
+  </updatedRecords>
+
+  <internalRecords>
+    <username>Владелец (Имя пользователя)</username>
+    <surname>Владелец (Фамилия)</surname>
+    <name>Владелец (Имя)</name>
+    <email>Владелец (Email)</email>
+    <profile>Владелец (Роль пользователя)</profile>
+    <groupName>Группа Владельца (Имя)</groupName>
+    <groupOwnerMail>Группа Владельца (Admin Email)</groupOwnerMail>
+    <createdate>Дата создания</createdate>
+    <recordName>Название записи</recordName>
+    <uuid>UUID метаданных</uuid>
+  </internalRecords>
+
+  <users>
+    <username>Имя пользователя</username>
+    <surname>Фамилия</surname>
+    <name>Имя</name>
+    <email>Email</email>
+    <userGroups>Группы/Пользовательские роли</userGroups>
+    <lastlogindate>Дата последнего входа в систему</lastlogindate>
+  </users>
+
+  <dataDownloads>
+    <username>Загрузившее лицо (Имя пользователя)</username>
+    <surname>Загрузившее лицо (Фамилия)</surname>
+    <name>Загрузившее лицо (Имя)</name>
+    <email>Загрузившее лицо (Email)</email>
+    <profile>Загрузившее лицо (Роль пользователя)</profile>
+    <userGroups>Группа</userGroups>
+    <uploadname>Наименование продукта</uploadname>
+    <filename>Название файла</filename>
+    <downloaddate>Дата скачивания</downloaddate>
+    <recordName>Название записи</recordName>
+    <uuid>UUID метаданных</uuid>
+    <requestername>Имя запрашивающего лица</requestername>
+    <requestermail>еMail запрашивающего лица</requestermail>
+    <requesterorg>Организация запрашивающего лица</requesterorg>
+    <requestercomments>Комментарий запрашивающего лица</requestercomments>
+    <expiry_datetime>Срок действия</expiry_datetime>
+  </dataDownloads>
+
+  <dataUploads>
+    <username>Загрузившее лицо (Username)</username>
+    <surname>Загрузившее лицо (Фамилия)</surname>
+    <name>Загрузившее лицо (Имя)</name>
+    <email>Загрузившее лицо (Email)</email>
+    <profile>Загрузившее лицо (Role)</profile>
+    <userGroups>Группа</userGroups>
+    <uploaddesc>Наименование продукта</uploaddesc>
+    <filename>Название файла</filename>
+    <uploaddate>Дата загрузки</uploaddate>
+    <recordname>Название записи</recordname>
+    <uuid>UUID метаданных</uuid>
+    <expiry_datetime>Срок действия</expiry_datetime>
+  </dataUploads>
+</strings>

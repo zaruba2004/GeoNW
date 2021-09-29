@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <massiveReplaceForm>
+    <title>Массовая замена метаданных</title>
+    <subtitle>Этот процесс позволяет заменить содержимое в выбранных метаданных</subtitle>
+    <description>
+      <h2 style="margin:0px; padding: 5px">Инструкция</h2>
+      <p style="margin:0px; padding: 5px">Для определения замены необходимо:</p>
+      <ol style="list-style-type: decimal; padding-left: 40px;">
+        <li>Выберите пакет, содержащий изменяемые метаданные</li>
+        <li>Выберите элемент метаданных, который требуется изменить</li>
+        <li>Укажите изменяемый фрагмент текста</li>
+        <li>Укажите новое содержание фрагмента</li>
+      </ol>
+      <p style="padding: 5px">Обратите внимание, что можно указать несколько замен, и процесс будет
+         заменять любое вхождение текста, указанного в (3) текстом, указанным в (4), для
+         элемента метаданных, указанного в (2)
+      </p>
+    </description>
+    <caseInsensitive>Нечувствительный к регистру поиск</caseInsensitive>
+    <package>Пакет</package>
+    <element>Элемент</element>
+    <searchText>Искомый фрагмент</searchText>
+    <replaceText>Замещаюий текст</replaceText>
+    <update>Обновить метаданные</update>
+    <test>Проверить</test>
+    <testResultsTitle>Результаты проверки обновления</testResultsTitle>
+    <resultsTitle>Результаты обновления</resultsTitle>
+    <fillFormFields>Выберите замену, чтобы начать процесс</fillFormFields>
+
+    <processed>Обработано</processed>
+    <changed>Изменено</changed>
+    <notchanged>Не изменено</notchanged>
+    <notowner>Не владелец</notowner>
+    <notfound>Не найдено</notfound>
+    <errors>Ошибка</errors>
+    <warnings>Предупреждение</warnings>
+
+    <section id="metadata" label="Metadata">
+      <field key="id.contact.individualName">Контакт > ФИО</field>
+      <field key="id.contact.organisationName">Контакт > Название организации</field>
+      <field key="id.contact.voicePhone">Контакт > Телефон</field>
+      <field key="id.contact.faxPhone">Контакт > Факс</field>
+      <field key="id.contact.address">Контакт > Пункт доставки</field>
+      <field key="id.contact.city">Контакт > Город</field>
+      <field key="id.contact.province">Контакт > Административный район (область)</field>
+      <field key="id.contact.postalCode">Контакт > Почтовый код</field>
+      <field key="id.contact.country">Контакт > Страна</field>
+      <field key="id.contact.email">Контакт > Email</field>
+      <field key="id.contact.or.url">Контакт > ОнлайнРесурс > URL</field>
+      <field key="id.contact.or.ap">Контакт > ОнлайнРесурс > Профиль приложения</field>
+      <field key="id.contact.or.name">Контакт > ОнлайнРесурс > Название</field>
+      <field key="id.contact.or.description">Контакт > ОнлайнРесурс > Описание</field>
+      <field key="id.contact.hoursOfService">Контакт > Рабочее время</field>
+      <field key="id.contact.contactInstructions">Контакт > Контактные инструкции</field>
+    </section>
+
+    <section id="dataIdentification" label="Data Identification">
+      <field key="id.dataid.abstract">Резюме</field>
+      <field key="id.dataid.purpose">Назначение</field>
+      <field key="id.dataid.keyword">Ключевое слово</field>
+
+      <field key="id.dataid.citation.individualName">Ссылка > ФИО</field>
+      <field key="id.dataid.citation.organisationName">Ссылка > Название организации</field>
+      <field key="id.dataid.citation.voicePhone">Ссылка > Телефон</field>
+      <field key="id.dataid.citation.faxPhone">Ссылка > Факс</field>
+      <field key="id.dataid.citation.address">Ссылка > Пункт доставки</field>
+      <field key="id.dataid.citation.city">Ссылка > Город</field>
+      <field key="id.dataid.citation.province">Ссылка > Административный район (область)</field>
+      <field key="id.dataid.citationt.postalCode">Ссылка > Почтовый код</field>
+      <field key="id.dataid.citation.country">Ссылка > Страна</field>
+      <field key="id.dataid.citation.email">Ссылка > Email</field>
+      <field key="id.dataid.citation.or.url">Ссылка > ОнлайнРесурс > URL</field>
+      <field key="id.dataid.citation.or.ap">Ссылка > ОнлайнРесурс > Профиль приложения</field>
+      <field key="id.dataid.citation.or.name">Ссылка > ОнлайнРесурс > Название</field>
+      <field key="id.dataid.citation.or.description">Ссылка > ОнлайнРесурс > Описание</field>
+      <field key="id.dataid.citation.hoursOfService">Ссылка > Рабочее время</field>
+      <field key="id.dataid.citation.contactInstructions">Ссылка > Контактные инструкции</field>
+
+      <field key="id.dataid.poc.individualName">Место контакта > ФИО</field>
+      <field key="id.dataid.poc.organisationName">Место контакта > Название организации</field>
+      <field key="id.dataid.poc.voicePhone">Место контакта > Телефон</field>
+      <field key="id.dataid.poc.faxPhone">Место контакта > Факс</field>
+      <field key="id.dataid.poc.address">Место контакта > Пункт доставки</field>
+      <field key="id.dataid.poc.city">Место контакта > Город</field>
+      <field key="id.dataid.poc.province">Место контакта > Административный район (область)</field>
+      <field key="id.dataid.poc.postalCode">Место контакта > Почтовый код</field>
+      <field key="id.dataid.poc.country">Место контакта > Страна</field>
+      <field key="id.dataid.poc.email">Место контакта > Email</field>
+      <field key="id.dataid.poc.or.url">Место контакта > ОнлайнРесурс > URL</field>
+      <field key="id.dataid.poc.or.ap">Место контакта > ОнлайнРесурс > Профиль приложения</field>
+      <field key="id.dataid.poc.or.name">Место контакта > ОнлайнРесурс > Название</field>
+      <field key="id.dataid.poc.or.description">Место контакта > ОнлайнРесурс > Описание</field>
+      <field key="id.dataid.poc.hoursOfService">Место контакта > Рабочее время</field>
+      <field key="id.dataid.poc.contactInstructions">Место контакта > Контактные инструкции</field>
+
+      <field key="id.dataid.resc.gc.useLimitation">Ограничения ресурсов > Общие ограничения > Использовать ограничение
+      </field>
+      <field key="id.dataid.resc.lc.useLimitation">Ограничения ресурсов > Юридические ограничения > Использовать ограничение
+      </field>
+      <field key="id.dataid.resc.lc.otherConstraints">Ограничения ресурсов > Ограничение безопасности > Использовать ограничение
+      </field>
+      <field key="id.dataid.resc.sc.useLimitation">Ограничения ресурсов > Общие ограничения > Использовать ограничение
+      </field>
+      <field key="id.dataid.resc.otherConstraints">Ограничения ресурсов > Другие ограничения</field>
+    </section>
+
+
+    <section id="serviceIdentification" label="Service Identification">
+      <field key="id.serviceid.abstract">Резюме</field>
+      <field key="id.serviceid.purpose">Назначение</field>
+
+      <field key="id.serviceid.citation.individualName">Ссылка > ФИО</field>
+      <field key="id.serviceid.citation.organisationName">Ссылка > Название организации</field>
+      <field key="id.serviceid.citation.voicePhone">Ссылка > Телефон</field>
+      <field key="id.serviceid.citation.faxPhone">Ссылка > Факс</field>
+      <field key="id.serviceid.citation.address">Ссылка > Пункт доставки</field>
+      <field key="id.serviceid.citation.city">Ссылка > Город</field>
+      <field key="id.serviceid.citation.province">Ссылка > Административный район (область)</field>
+      <field key="id.serviceid.citationt.postalCode">Ссылка > Почтовый код</field>
+      <field key="id.serviceid.citation.country">Ссылка > Страна</field>
+      <field key="id.serviceid.citation.email">Ссылка > Email</field>
+      <field key="id.serviceid.citation.or.url">Ссылка > ОнлайнРесурс > URL</field>
+      <field key="id.serviceid.citation.or.ap">Ссылка > ОнлайнРесурс > Профиль приложения</field>
+      <field key="id.serviceid.citation.or.name">Ссылка > ОнлайнРесурс > Название</field>
+      <field key="id.serviceid.citation.or.description">Ссылка > ОнлайнРесурс > Описание</field>
+      <field key="id.serviceid.citation.hoursOfService">Ссылка > Рабочее время</field>
+      <field key="id.serviceid.citation.contactInstructions">Ссылка > Контактные инструкции</field>
+
+      <field key="id.serviceid.poc.individualName">Место контакта > ФИО</field>
+      <field key="id.serviceid.poc.organisationName">Место контакта > Название организации</field>
+      <field key="id.serviceid.poc.voicePhone">Место контакта > Телефон</field>
+      <field key="id.serviceid.poc.faxPhone">Место контакта > Факс</field>
+      <field key="id.serviceid.poc.address">Место контакта > Пункт доставки</field>
+      <field key="id.serviceid.poc.city">Место контакта > Город</field>
+      <field key="id.serviceid.poc.province">Место контакта > Административный район (область)
+      </field>
+      <field key="id.serviceid.poc.postalCode">Место контакта > Почтовый код</field>
+      <field key="id.serviceid.poc.country">Место контакта > Страна</field>
+      <field key="id.serviceid.poc.email">Место контакта > Email</field>
+      <field key="id.serviceid.poc.or.url">Место контакта > ОнлайнРесурс > URL</field>
+      <field key="id.serviceid.poc.or.ap">Место контакта > ОнлайнРесурс > Профиль приложения</field>
+      <field key="id.serviceid.poc.or.name">Место контакта > ОнлайнРесурс > Название</field>
+      <field key="id.serviceid.poc.or.description">Место контакта > ОнлайнРесурс > Описание
+      </field>
+      <field key="id.serviceid.poc.hoursOfService">Место контакта > Рабочее время</field>
+      <field key="id.serviceid.poc.contactInstructions">Место контакта > Контактные инструкции
+      </field>
+
+      <field key="id.serviceid.connectpoint.url">Точка соединения > URL</field>
+      <field key="id.serviceid.connectpoint.ap">Точка соединения > Профиль приложения</field>
+      <field key="id.serviceid.connectpoint.name">Точка соединения > Название</field>
+      <field key="id.serviceid.connectpoint.description">Точка соединения > Описание</field>
+    </section>
+
+    <section id="maintenanceInformation" label="Maintenance Information">
+      <field key="mi.contact.individualName">Контакт > ФИО</field>
+      <field key="mi.contact.organisationName">Контакт > Название организации</field>
+      <field key="mi.contact.voicePhone">Контакт > Телефон</field>
+      <field key="mi.contact.faxPhone">Контакт > Факс</field>
+
+      <field key="mi.contact.address">Контакт > Пункт доставки</field>
+      <field key="mi.contact.city">Контакт > Город</field>
+      <field key="mi.contact.province">Контакт > Административный район (область)</field>
+      <field key="mi.contact.postalCode">Контакт > Почтовый код</field>
+      <field key="mi.contact.country">Контакт > Страна</field>
+      <field key="mi.contact.email">Контакт > Email</field>
+      <field key="mi.contact.or.url">Контакт > ОнлайнРесурс > URL</field>
+      <field key="mi.contact.or.ap">Контакт > ОнлайнРесурс > Профиль приложения</field>
+      <field key="mi.contact.or.name">Контакт > ОнлайнРесурс > Название</field>
+      <field key="mi.contact.or.description">Контакт > ОнлайнРесурс > Описание</field>
+      <field key="mi.contact.hoursOfService">Контакт > Рабочее время</field>
+      <field key="mi.contact.contactInstructions">Контакт > Контактные инструкции</field>
+
+    </section>
+
+    <section id="contentInformation" label="Content Information">
+      <field key="ci.citation.individualName">Ссылка на каталог пространственных объектов > ФИО</field>
+      <field key="ci.citation.organisationName">Ссылка на каталог пространственных объектов > Название организации
+      </field>
+      <field key="ci.citation.voicePhone">Ссылка на каталог пространственных объектов > Телефон</field>
+      <field key="ci.citation.faxPhone">Ссылка на каталог пространственных объектов > Факс</field>
+      <field key="ci.citation.address">Ссылка на каталог пространственных объектов > Пункт доставки</field>
+      <field key="ci.citation.city">Ссылка на каталог пространственных объектов > Город</field>
+      <field key="ci.citation.province">Ссылка на каталог пространственных объектов > Административный район (область)
+      </field>
+      <field key="ci.citation.postalCode">Ссылка на каталог пространственных объектов > Почтовый код</field>
+      <field key="ci.citation.country">Ссылка на каталог пространственных объектов > Страна</field>
+      <field key="ci.citation.email">Ссылка на каталог пространственных объектов > Email</field>
+      <field key="ci.citation.or.url">Ссылка на каталог пространственных объектов > ОнлайнРесурс > URL</field>
+      <field key="ci.citation.or.ap">Ссылка на каталог пространственных объектов > ОнлайнРесурс > Профиль приложения
+      </field>
+      <field key="ci.citation.or.name">Ссылка на каталог пространственных объектов > ОнлайнРесурс > Название</field>
+      <field key="ci.citation.or.description">Ссылка на каталог пространственных объектов > ОнлайнРесурс > Описание
+      </field>
+      <field key="ci.citation.hoursOfService">Ссылка на каталог пространственных объектов > Рабочее время</field>
+      <field key="ci.citation.contactInstructions">Ссылка на каталог пространственных объектов > Контактные инструкци
+      </field>
+    </section>
+
+    <section id="distributionInformation" label="Distribution Information">
+      <field key="di.contact.individualName">Дистрибьюторский Контакт > ФИО</field>
+      <field key="di.contact.organisationName">Дистрибьюторский Контакт > Название организации</field>
+      <field key="di.contact.voicePhone">Дистрибьюторский Контакт > Телефон</field>
+      <field key="di.contact.faxPhone">Дистрибьюторский Контакт > Факс</field>
+      <field key="di.contact.address">Дистрибьюторский Контакт > Пункт доставки</field>
+      <field key="di.contact.city">Дистрибьюторский Контакт > Город</field>
+      <field key="di.contact.province">Дистрибьюторский Контакт > Административный район (область)</field>
+      <field key="di.contact.postalCode">Дистрибьюторский Контакт > Почтовый код</field>
+      <field key="di.contact.country">Дистрибьюторский Контакт > Страна</field>
+      <field key="di.contact.email">Дистрибьюторский Контакт > Email</field>
+      <field key="di.contact.hoursOfService">Дистрибьюторский Контакт > Рабочее время</field>
+      <field key="di.contact.contactInstructions">Дистрибьюторский Контакт> Контактные инструкции</field>
+      <field key="di.fees">Сбор</field>
+      <field key="di.transferOptions.url">Опции цифровой передачи > URL</field>
+      <field key="di.transferOptions.ap">Опции цифровой передачи > Профиль приложения</field>
+      <field key="di.transferOptions.name">Опции цифровой передачи > Название</field>
+      <field key="di.transferOptions.description">Опции цифровой передачи > Описание</field>
+    </section>
+
+    <replacements-defined>Замена определена</replacements-defined>
+    <no-replacements-defined>Замена не определена</no-replacements-defined>
+
+    <massiveMetadataReplace>Массовая замена метаданных</massiveMetadataReplace>
+  </massiveReplaceForm>
+</strings>

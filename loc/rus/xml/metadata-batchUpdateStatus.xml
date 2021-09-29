@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+  <notfound>Метаданные не могут быть найдены</notfound>
+  <notowner>Статус метаданных не может быть обновлен, потому что Вы не являетесь владельцем метаданных</notowner>
+  <updated>Статус метаданных обновлен</updated>
+  <resultstitle>Результаты обновления статуса</resultstitle>
+</strings>
