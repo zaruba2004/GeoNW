@@ -4,9 +4,10 @@
 
 // ----- topics
 .gn-row-topics {
-  background-color: @gn-topics-background-color;
+  // background-color: @gn-topics-background-color;
   padding: 30px 20px 40px 20px;
   h4 {
+    // color: white;
     font-size: 16px;
     margin-bottom: 20px;
     label {
@@ -22,7 +23,7 @@
 // 
 // ----- image/icon
 .badge-result {
-  border-radius: 20px !important;
+  border-radius: 10px !important;
   float: left;
   height: 40px;
   line-height: 43px;
@@ -34,8 +35,9 @@
   margin-right: 10px;
   background: transparent;
   a {
+    background: rgba(0, 0, 0, 0.35);
     color: #fff;
-    border-radius: 20px; 
+    border-radius: 20px 10px 10px 20px; 
     padding-right: 10px;
     &:hover {
       text-decoration: none;
@@ -50,15 +52,22 @@
 }
 // ----- colors
 .badge-result-topic a {
-  background: #2c6ea7;
+  // border: 1px solid white;
+  // background: #2c6ea7;
   &:hover {
+    // background-color: #01ace4;
+    border-color: #215481;
+    // box-shadow: 1px 1px 3px white;
     background: #215481; 
   }
 }
 .badge-result-type a {
-  background: #078A00;
+  // border: 1px solid white;
+  // background: #078A00;
   &:hover {
-    background: #078A00; 
+    background-color: #01ace4;
+    border-color: #01ace4;
+    // background: #078A00; 
   }
 }
 .badge-result-inspire {

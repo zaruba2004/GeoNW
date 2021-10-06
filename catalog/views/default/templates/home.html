@@ -72,23 +72,31 @@
       <div class="col-sm-12 col-md-9" data-ng-show="browse !== ''">
         <h4>
           <span data-translate="">browseBy</span>
-          <span
-            data-ng-show="searchInfo.facet['inspireThemes'].length > 0 && searchInfo.facet['topicCats'].length > 0">
+          <span data-ng-show="searchInfo.facet['inspireThemes'].length > 0 || searchInfo.facet['categories'].length > 0 || searchInfo.facet['topicCats'].length > 0">
+
+            <!-- data-ng-show="searchInfo.facet['inspireThemes'].length > 0 && searchInfo.facet['topicCats'].length > 0"> -->
             <label data-ng-show="searchInfo.facet['inspireThemes'].length > 0">
               <input type="radio" name="browse" value="inspire" data-ng-model="browse"/>
               <span data-translate="">inspireThemes</span>
             </label>
+            <label data-ng-show="searchInfo.facet['categories'].length > 0"> 
+              <input type="radio" name="browse" value="cat" data-ng-model="browse"/> 
+              <span data-translate="">categories</span>
+            </label>       
             <label data-ng-show="searchInfo.facet['topicCats'].length > 0">
               <input type="radio" name="browse" value="topics" data-ng-model="browse"/>
               <span data-translate="">topicCats</span>
             </label>
           </span>
-          <label
+          <!-- <label
             data-ng-show="searchInfo.facet['inspireThemes'].length > 0 && searchInfo.facet['topicCats'].length == 0"><span
             data-translate="">inspireThemes</span></label>
           <label
             data-ng-show="searchInfo.facet['topicCats'].length > 0 && searchInfo.facet['inspireThemes'].length == 0"><span
             data-translate="">topicCats</span></label>
+          <label
+            data-ng-show="searchInfo.facet['topicCats'].length > 0 && searchInfo.facet['categories'].length == 0"><span
+            data-translate="">categories</span></label> -->
         </h4>
 
   <!--       <div class="row">

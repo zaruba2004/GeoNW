@@ -26,8 +26,10 @@
   background-color: @gn-menubar-background;
   border-color: @gn-menubar-border-color;
   border-width: 0 0 1px 0;
+  border-bottom: 2px solid black;
   z-index: 100;
   border-radius: 0;
+  height: 60px;
   .navbar-nav > li > a, .navbar-nav > .open > a, .navbar-nav > .active > a {
     height: @gn-menubar-height;
     color: @gn-menubar-color;
@@ -69,6 +71,7 @@
         @media (min-width: @screen-lg-min) {
           max-width: 230px;
           .text-overflow();
+          font-weight: bold;
         }
       }
     }
