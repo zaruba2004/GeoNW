@@ -239,10 +239,12 @@
         if (angular.isDefined($scope.searchInfo.facet)) {
           if ($scope.searchInfo.facet['inspireThemes'].length > 0) {
             $scope.browse = 'inspire';
+          } else if ($scope.searchInfo.facet['categories'].length > 0) {
+           $scope.browse = '_cat';
           } else if ($scope.searchInfo.facet['topicCats'].length > 0) {
             $scope.browse = 'topics';
-          } else if ($scope.searchInfo.facet['categories'].length > 0) {
-           $scope.browse = 'cat';
+          } else {
+            $scope.browse = '_cat';
           }
         }
       });
