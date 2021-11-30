@@ -1,48 +1,73 @@
-@import "../../../style/gn_bootstrap.less"; // must be first
-// variables for manipulating the theme
-@import "gn_variables_default.less"; // must be last
+@import "gn_variables_dutch.less";
 
-.navbar {
-  margin-bottom: 0;
+// breadcrumbs (in second toolbar/navbar)
+.crumb {
+  background-color: @gn-menubar-background-active;
+  padding: 1.0em 21px 1.3em 21px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: @gray-base;
+  a {
+    color: @gray-base;
+  }
 }
-[ng-app^="gn_search_"] body, [ng-app="gn_login"] body {
-  &.gn-header-fixed {
-    .gn-top-bar {
-      position: fixed;
-      right: 0;
-      left: 0;
-      top: 0;
-      z-index: 1030;
-    }
-    &.gn-logo-in-header {
-      .gn-top-bar {
-        top: @gn-header-height;
-      }
+
+// header 
+.gn-header {
+  .contact-links {
+    margin: 10px 5px;
+  }
+}
+
+// top bar
+.gn-top-bar {
+  padding: 0;
+  z-index: 200 !important;
+  @media (min-width: @screen-sm-min) {
+    padding-top: 8px;
+  }
+  @media (max-width: @screen-xs-max) {
+    padding: 0;
+  }
+  .navbar-nav > li > a, .navbar-nav > .open > a, .navbar-nav > .active > a {
+    i {
+      display: none;
     }
   }
+}
+// ----- divider
+.gn-divider-bar {
+  height: 5px;
+  background-color: @gn-menubar-background-active;
+}
+.navbar {
+  margin-bottom: 0;
 }
 
 .navbar-default {
   background-color: @gn-menubar-background;
   border-color: @gn-menubar-border-color;
-  border-width: 0 0 1px 0;
-  border-bottom: 2px solid black;
+  border-width: 00;
   z-index: 100;
   border-radius: 0;
-  height: 60px;
   .navbar-nav > li > a, .navbar-nav > .open > a, .navbar-nav > .active > a {
     height: @gn-menubar-height;
     color: @gn-menubar-color;
     &:hover, &:focus {
       color: @gn-menubar-color-hover;
-      background-color: @gn-menubar-background-hover;
+      background-color: @gn-menubar-background-active;
     }
   }
   .navbar-nav li.dropdown-hover.open:not(.active) > .dropdown-toggle {
     &:hover, &:focus {
-      background-color: @gn-menubar-background-hover;
+      color: @gn-menubar-color-hover;
+      background-color: @gn-menubar-background-active;
     }
-    
+  }
+  .gn-logo-link {
+    .gn-logo {
+      margin-top: -15px;
+    }
   }
   .dropdown-menu {
     > li {
@@ -59,24 +84,13 @@
     background-color: @gn-menubar-background-active;
     color: @gn-menubar-color-active;
   }
-  .gn-logo-link {
-    padding: 12px 15px;
-    .gn-logo {
-      margin-top: -12px;
-    }
-    .gn-name {
-      margin-top: 5px;
+  .gn-name.gn-truncate {
+    @media (min-width: @screen-lg-min) {
+      max-width: 230px;
       display: inline-block;
-      &.gn-truncate {
-        @media (min-width: @screen-lg-min) {
-          max-width: 230px;
-          .text-overflow();
-          font-weight: bold;
-        }
-      }
+      .text-overflow();
     }
   }
-
   // also add `display:none`, this doesn't take whitespace on the navbar
   .badge.invisible {
     display: none
@@ -97,26 +111,29 @@
   }
   // more small screen oriented menu options
   @media (max-width: @screen-xs-max) {
-    padding-left: 0;
-    padding-right: 0;
     .navbar-header {
       .btn-link {
         padding: 13px;
+        color: @gn-menubar-color;
+        &:hover {
+          color: @gn-menubar-color-hover;
+        }
       }
     }
+    .navbar-nav .open .dropdown-menu {
+      display: block;
+    }
     .gn-logo-link {
-      padding: 12px 0 13px 10px;
+      padding: 13px 0 13px 10px;
     }
     .navbar-collapse {
       background-color: #fff;
-      padding: 15px;
+      padding: 10px 15px;
       box-shadow: 0 2px 0.5px rgba(0, 0, 0, 0.1) !important;
     }
     .navbar-nav > li > a, .navbar-nav > .open > a, .navbar-nav > .active > a {
       background: none;
-    }
-    .navbar-nav .open .dropdown-menu > li > a {
-      min-width: 0;
+      color: #555;
     }
     .gn-clear-xs {
       clear: both;
@@ -126,7 +143,7 @@
       padding: 15px 0;
       height: auto;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: 300;
       clear: both;
       i {
         display: none;
@@ -137,15 +154,16 @@
       }
     }
     .gn-menu-xs {
-      padding: 1px;
-      overflow-y: hidden !important;
+      padding: 1px 0 0 1px;
+      overflow: hidden !important;
       max-height: none;
       .clearfix();
       .gn-separator-xs {
         display: none;
       }
       .gn-menuitem-xs {
-        width: calc(~"33% + 2px");
+        width: 33%;
+        width: calc(~"(100vw - 32px)/3");
         height: 64px;
         text-align: center;
         border: 1px solid @navbar-default-border;
@@ -154,13 +172,13 @@
         margin-left: -1px;
         margin-top: -1px;
         a {
-          color: @gn-menubar-color;
           display: block;
           padding: 7px 20px !important;
           height: auto;
           i {
             font-size: 22px;
             margin: 3px 0;
+            display: inline-block;
           }
           span {
             display: block;
@@ -168,6 +186,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            width: calc(~"((100vw - 30px)/3) - 40px");
           }
           [data-gnv-layer-indicator] {
             display: none;
@@ -181,12 +200,10 @@
     .username-dropdown {
       .gn-menuitem-xs {
         width: 50%;
-        height: 46px !important;
         border: 1px solid @navbar-default-border;
         background-color: @body-bg;
         float: left;
-        margin-left: -1px;
-        margin-top: -1px;
+        margin-top: 15px;
         min-width: 0;
         img {
           display: none;
@@ -203,7 +220,6 @@
         display: block !important;
         padding: 0;
         margin: 0;
-        border: 0;
         .clearfix();
         // username & password input
         .form-group-sm {
@@ -224,9 +240,10 @@
       }
     }
     .language-switcher {
-      padding: 10px 15px;
-      .form-control {
-        width: calc(~"100% - 3px");
+      padding-left: 0;
+      padding-right: 0;
+      @media (max-width: @screen-sm-min) {
+        padding: 0 15px;
       }
     }
     @media (min-width: @screen-sm-min) {
@@ -241,17 +258,46 @@
   }
 
 }
-
+.username-dropdown {
+  > li > a i, > .open > a i {
+    display: inline-block !important;
+    @media (min-width: @screen-lg-min) {
+      display: none !important;
+    }
+  }
+}
 @media (max-width: @grid-float-breakpoint) {
   .navbar-nav {
     margin: 0;
   }
 }
 
+.gn-logo{
+  max-height: 70px;
+}
 // nojs styles
 .gn-nojs {
   .gn-logo {
     max-height: 28px;
     margin: -8px 0px;
+  }
+}
+// toggle button for the navigation bar
+.navbar-default {
+  .navbar-toggle {
+    border: 0;
+    &:hover, &:focus {
+      background-color: @gn-menubar-background;
+      color: @gn-menubar-color;
+    }
+    .icon-bar {
+      background-color: @gn-menubar-color;
+    }
+  }
+  .gn-logo-is-right {
+    .navbar-toggle {
+      float: left !important;
+      margin-left: 15px;
+    }
   }
 }

@@ -171,6 +171,27 @@
     <constructor-arg name="regex" value="\s*?/\s*?"/>
   </bean>
 
+
+
+<bean id="GeonetworkDataDirectory" class="org.fao.geonet.kernel.GeonetworkDataDirectory" lazy-init="true">
+  <property name="systemDataDir" ref="GNSystemDataDir"/>
+  <property name="schemaPluginsDir" ref="GNSchemaPluginsDir"/>
+</bean>
+<bean id="GNSystemDataDir" class="java.nio.file.Paths" factory-method="get">
+   <constructor-arg index="0" value="/path/to/gn/dir"/>
+   <constructor-arg index="1"><array /></constructor-arg>
+</bean>
+<bean id="GNSchemaPluginsDir" class="java.nio.file.Paths" factory-method="get">
+    <constructor-arg index="0" value="../geonetwork_data_dir"/>
+    <constructor-arg index="1"><array /></constructor-arg>
+</bean>
+
+
+
+
+
+
+
   <!--
   Example configuration for hierarchical facet based on
   the GeoNetwork region thesaurus or GEMET.

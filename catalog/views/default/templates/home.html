@@ -1,8 +1,8 @@
-<!-- <div> -->
+<div class="container">
   <div class="row gn-row-main">
     <div data-ng-class="fluidLayout ? 'container-fluid' : 'container'">
       <div class="col-md-offset-1 col-md-10 col-lg-8 col-lg-offset-2">
-
+        <!-- https://www.pikpng.com/pngl/b/215-2158192_grid-lines-png.png -->
         <div class="input-group gn-form-any">
           <input type="text"
                 class="form-control input-lg"
@@ -189,7 +189,7 @@
   
   <div class="row gn-row-info"
        data-ng-show="searchInfo.count > 0"
-       data-ng-class="{'gn-info-list-blocks': type === 'blocks' || type === undefined, 'gn-info-list-large': type === 'large', 'gn-info-list-small': type === 'small'}"> 
+       data-ng-class="{'gn-info-list-blocks': type === 'blocks' || type === undefined, 'gn-info-list-large': type === 'large', 'gn-info-list-small': type === 'small', 'gn-info-list-tree': type === 'tree'}"> 
     <div data-ng-class="fluidLayout ? 'container-fluid' : 'container'">
       <div class="col-sm-12">
 
@@ -215,6 +215,13 @@
                 data-ng-class="{'active': type === 'small' || type === undefined}"
                 aria-label="{{'listTypeSmall' | translate}}">
           <i class="fa fa-align-justify" aria-hidden="true"></i>
+        </button>
+        <button id="btn-toggle-tree" type="button" class="btn btn-default"
+             data-ng-click="toggleListType('tree')"
+             data-ng-model="type"
+             data-ng-class="{'active': type === 'tree' || type === undefined}"
+             aria-label="{{'TreeType' | translate}}">
+          <i class="fa fa-list-ul" aria-hidden="true"></i>
         </button>
       </div>
 
@@ -268,4 +275,4 @@
     </div>
   </div>
   <!-- /.gn-row-info -->
-<!-- </div> -->
+</div>
