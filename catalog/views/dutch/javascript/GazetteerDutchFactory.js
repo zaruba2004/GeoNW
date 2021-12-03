@@ -45,7 +45,7 @@
           return {
             onClick: function(scope, loc, map) {
             	// get the details from the lookup service
-              var url = `https://address-services.nca.by/map/api/address/${loc.id}`;
+              var url = `https://address-services.nca.by/belgeodezia/api/address/${loc.id}`;
               $http.get(url).
               success(function(response) {
 
@@ -62,7 +62,7 @@
                   var type = response.result[0].houseN;
 
                   if (type != null) {
-                    zoom = 16;
+                    zoom = 17;
                   // } else if (type == 'woonplaats') {
                   //   zoom = 9;
                   // } else if (type == 'weg' || type == 'postcode') {
@@ -103,7 +103,7 @@
                     });
                 return (props.length == 0) ? '' : '—' + props.join(', ');
               };
-              var url = 'https://address-services.nca.by/map2/api/address/searchAddressByString';
+              var url = 'https://address-services.nca.by/belgeodezia/api/address/searchAddressByString';
               $http.post(url, {
                 arguments: query
               }).
