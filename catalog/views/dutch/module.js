@@ -126,6 +126,8 @@ module.controller('gnsSearchTopEntriesController', [
 
       var viewerMap = gnSearchSettings.viewerMap;
       var searchMap = gnSearchSettings.searchMap;
+      var isFullScreenMap;
+      $scope.isFullScreenMap = false
 
       $scope.modelOptions = angular.copy(gnGlobalSettings.modelOptions);
       $scope.modelOptionsForm = angular.copy(gnGlobalSettings.modelOptions);
@@ -147,7 +149,7 @@ module.controller('gnsSearchTopEntriesController', [
       $scope.fluidHeaderLayout = gnGlobalSettings.gnCfg.mods.header.fluidHeaderLayout;
       $scope.showGNName = gnGlobalSettings.gnCfg.mods.header.showGNName;
       $scope.fixedMiniMap = false;
-      $scope.extraWideContainer = false;
+      $scope.extraWideContainer = false;      
       $scope.toggleMap = function () {
         $(searchMap.getTargetElement()).toggle();
         $('button.gn-minimap-toggle > i').toggleClass('fa-angle-double-left fa-angle-double-right');
@@ -208,6 +210,10 @@ module.controller('gnsSearchTopEntriesController', [
       $scope.backToSearch = function() {
         gnSearchLocation.restoreSearch();
       };
+
+      $scope.fullScreenMap = function() {        
+        $scope.isFullScreenMap = !$scope.isFullScreenMap;      
+      }
 
       $scope.canEdit = function(record) {
         // TODO: take catalog config for harvested records
