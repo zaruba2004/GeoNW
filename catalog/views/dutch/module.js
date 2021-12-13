@@ -126,8 +126,7 @@ module.controller('gnsSearchTopEntriesController', [
 
       var viewerMap = gnSearchSettings.viewerMap;
       var searchMap = gnSearchSettings.searchMap;
-      var isFullScreenMap;
-      $scope.isFullScreenMap = false
+      $scope.isFullScreenMap = true //Big size in page map
 
       $scope.modelOptions = angular.copy(gnGlobalSettings.modelOptions);
       $scope.modelOptionsForm = angular.copy(gnGlobalSettings.modelOptions);
