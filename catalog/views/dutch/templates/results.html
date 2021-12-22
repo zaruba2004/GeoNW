@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div data-ng-class="fixedMiniMap ? 'col-md-8' : 'col-md-6'">
+    <div data-ng-class="fixedMiniMap ? 'col-md-8' : toggleMaxSizeMap ? 'ng-hide' : 'col-md-6'">
       
       <span class="loading fa fa-spinner fa-spin"
             data-ng-show="searching"></span>
@@ -84,10 +84,10 @@
         </div>
       </div>
     </div>
-    <div data-ng-class="fixedMiniMap ? 'gn-fixed-map' : 'col-md-3'"">
+    <div class="gn-search-map-field-sm-md" data-ng-class="fixedMiniMap ? [fixedMiniMapFullSreen ? 'gn-fixed-map' : 'gn-fixed-map-full-screen'] : toggleMaxSizeMap ? 'col-md-9 gn-search-map-field' : 'col-md-3 mapCloseHeightSizeAdapt'">
       <div data-gn-map-field="searchObj.searchMap"
            data-gn-map-field-geom="searchObj.params.geometry"
-           data-gn-map-field-opt="searchObj.mapfieldOption"
+           data-gn-map-field-opt="searchObj.mapfieldOption"           
            class="gn-search-map"></div>
 
       <button data-ng-click="toggleMap()"

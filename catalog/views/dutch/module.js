@@ -148,6 +148,8 @@ module.controller('gnsSearchTopEntriesController', [
       $scope.fluidHeaderLayout = gnGlobalSettings.gnCfg.mods.header.fluidHeaderLayout;
       $scope.showGNName = gnGlobalSettings.gnCfg.mods.header.showGNName;
       $scope.fixedMiniMap = false;
+      $scope.fixedMiniMapFullSreen = true;
+      $scope.toggleMaxSizeMap = false;  // big map for resultsPage
       $scope.extraWideContainer = false;      
       $scope.toggleMap = function () {
         $(searchMap.getTargetElement()).toggle();
@@ -210,9 +212,28 @@ module.controller('gnsSearchTopEntriesController', [
         gnSearchLocation.restoreSearch();
       };
 
+      $scope.fixedMiniMapVisibl = function() {
+        $scope.fixedMiniMap = !$scope.fixedMiniMap
+        $('button.fixed-mini-map-visib-toggle > i').toggleClass('fa-angle-down fa-angle-up');
+      };
+
       $scope.fullScreenMap = function() {        
         $scope.isFullScreenMap = !$scope.isFullScreenMap;      
-      }
+      };
+
+      $scope.maxSizeMap = function() {         
+        $('button.max-size-map-toggle > i').toggleClass('fa-expand fa-compress');
+        setTimeout(() => {
+          let widthMapField = document.querySelectorAll(".ol-map-dutch")[0].clientWidth;
+          let heightMapField = document.querySelectorAll(".ol-map-dutch")[0].clientHeight;
+          searchMap.setSize([widthMapField,heightMapField]);
+        }, 300)
+        if(!$scope.fixedMiniMap){
+          $scope.toggleMaxSizeMap = !$scope.toggleMaxSizeMap; 
+        } else {
+          $scope.fixedMiniMapFullSreen = !$scope.fixedMiniMapFullSreen
+        } 
+      }	
 
       $scope.canEdit = function(record) {
         // TODO: take catalog config for harvested records

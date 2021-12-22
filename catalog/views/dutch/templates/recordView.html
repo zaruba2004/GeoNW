@@ -355,7 +355,7 @@
                 <div class="row" data-ng-if="mdView.current.record.crs">
                   <div class="col-md-5 dutch-md-label" data-translate="">crs</div>
                   <div class="col-md-7">
-                    <span data-ng-repeat="crs in mdView.current.record.crs track by $index | limitTo: 10">
+                    <span ng-style="{'word-wrap': 'break-word'}" data-ng-repeat="crs in mdView.current.record.crs track by $index | limitTo: 10">
                       {{crs|empty}}<br>
                     </span>
                   </div>
