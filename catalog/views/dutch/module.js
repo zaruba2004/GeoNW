@@ -212,9 +212,16 @@ module.controller('gnsSearchTopEntriesController', [
         gnSearchLocation.restoreSearch();
       };
 
+      var updateSizeSearchMap = function() {
+        setTimeout(() => {
+          searchMap.updateSize();
+        }, 300)
+      };
+
       $scope.fixedMiniMapVisibl = function() {
         $scope.fixedMiniMap = !$scope.fixedMiniMap
         $('button.fixed-mini-map-visib-toggle > i').toggleClass('fa-angle-down fa-angle-up');
+        updateSizeSearchMap();
       };
 
       $scope.fullScreenMap = function() {        
@@ -223,11 +230,7 @@ module.controller('gnsSearchTopEntriesController', [
 
       $scope.maxSizeMap = function() {         
         $('button.max-size-map-toggle > i').toggleClass('fa-expand fa-compress');
-        setTimeout(() => {
-          let widthMapField = document.querySelectorAll(".ol-map-dutch")[0].clientWidth;
-          let heightMapField = document.querySelectorAll(".ol-map-dutch")[0].clientHeight;
-          searchMap.setSize([widthMapField,heightMapField]);
-        }, 300)
+        updateSizeSearchMap();
         if(!$scope.fixedMiniMap){
           $scope.toggleMaxSizeMap = !$scope.toggleMaxSizeMap; 
         } else {
@@ -393,6 +396,9 @@ module.controller('gnsSearchTopEntriesController', [
       var setActiveTab = function() {
         $scope.activeTab = $location.path().
         match(/^(\/[a-zA-Z0-9]*)($|\/.*)/)[1];
+        if($scope.activeTab == '/search') {
+          searchMap.updateSize();
+        }
       };
 
       setActiveTab();
